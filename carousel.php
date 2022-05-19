@@ -38,9 +38,11 @@ $result8 = $conn->query($sql8);
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style type="text/css">
 		*{
+
 			margin: 0;
 			padding: 0;
 			background-color: white;
+
 		}
 		.carousel{
 			height: 600px;
@@ -49,28 +51,80 @@ $result8 = $conn->query($sql8);
 			width: 500px;
 
 		}
-	</style>
-</head>
-<body onclick='window.location.href="RFID.php"'>>
-<div class="carousel">
-	<a href="#one" class="carousel-item"><img src="images/1.png" alt=""></a>
-	<a href="#two" class="carousel-item"><img src="images/2.png" alt=""></a>
-	<a href="#three" class="carousel-item"><img src="images/3.jpg" alt=""></a>
-	<a href="#four" class="carousel-item"><img src="images/4.png" alt=""></a>
-	<a href="#five" class="carousel-item"><img src="images/5.png" alt=""></a>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+.btn:focus {
+  background-color: #74ABFF;
+  outline: none;
+}
+
+.btn {
+	border-radius: 20px;
+	border: 1px solid #74ABFF;
+	background-color: #74ABFF;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 45px;
+	letter-spacing: 1px;
+	height: 50%;
+	transition: transform 80ms ease-in;
+}
+
+
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 <script type="text/javascript">
+
 	$(document).ready(function(){
+
+
 		$(".carousel").carousel({
 			indicators: false
 		});
+
+  $(".next").click(function() {
+    $(".carousel").carousel("next");
+  });
+
+  $(".prev").click(function() {
+    $(".carousel").carousel("prev");
+  });
+
+		
 		setInterval(function(){
 			$(".carousel").carousel("next");
-		}, 2000);
+		}, 3000); 
+
+
+
 	});
-</script>        
+</script> 
+</head>
+
+
+<body>
+
+
+ 
+<div class="carousel">
+	<a href="#one" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/1.png" alt=""></a>
+	<a href="#two" class="carousel-item" onclick='window.location.href="RFID.php"' ><img src="images/2.png" alt=""></a>
+	<a href="#three" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/3.jpg" alt=""></a>
+	<a href="#four" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/4.png" alt=""></a>
+	<a href="#five" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/5.png" alt=""></a>
+
+
+</div>
+
+<center>
+   <div class="btn prev"> < PREVIOUS </div>
+     <div class="btn next"> NEXT > </div>
+
+</center>
+       
 </body>
 </html>
