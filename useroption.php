@@ -55,9 +55,6 @@ background: #dde3ed;
 
 
 	</style>
-}
-
-
 </head>
 <body
 	<div class="row">
