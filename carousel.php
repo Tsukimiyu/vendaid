@@ -64,7 +64,7 @@ $result8 = $conn->query($sql8);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
-	padding: 0px 45px;
+	padding: 5px 50px 5px;
 	letter-spacing: 1px;
 	height: 50%;
 	transition: transform 80ms ease-in;
