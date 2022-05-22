@@ -36,7 +36,7 @@ if (isset($_POST['RFID'])){
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>Private RFID Scan</title>
+  <title>Public RFID Scan</title>
   <style type="text/css">
     *{
       margin: 0;
@@ -61,16 +61,22 @@ if (isset($_POST['RFID'])){
     background-color: white;
 }
 body {
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
+/* Hide scrollbars */
 }
 .textbox {
+    height: 2%;
     overflow: hidden;
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
     border-bottom: 1px white;
 }
-  
+ 
+.rfidtxt {
+  visibility: hidden;
+} 
+
 .textbox input {
     border: none;
     outline: none;
@@ -107,13 +113,6 @@ body {
   outline: none;
 }
 
-.textbox {
-  height: 2%;
-}
-
-.rfidtxt {
-  display: none;
-}
 
 .title1{
 
@@ -122,14 +121,22 @@ body {
  display: inline-block;
 
 }
+
 </style>
-<body>
+
+<script>
+function gFocus() {
+  document.getElementById("RFID").focus();
+}
+
+</script>
+<body onload="gFocus()" onclick="gFocus()">
   
   <div class="container-1">
-    <a href="carousel.php"><input type="button" placeholder="Back" class="button" value=" < Back"></a> <center> <h2 class="title1" style= "color:black;">Please tap ID on scanner</h2> </center>
-   <center>
+    <a href="carousel.php"><input type="button" placeholder="Back" class="button" value=" < Back"></a> 
+    <center> <h2 class="title1" style= "color:black;">Please tap ID on scanner</h2>
     <div class="row"></div>
-    <img src="images/RFID1.png" width="35%" height="35%"></center>
+    <img src="images/RFID1.png" width="35%" height="35%" onclick="gFocus()" id="image"></center>
   <form name="form" action="" method="post">
   <div class="textbox"><input style=back type="text" autofocus="autofocus" name="RFID" id="RFID" class="rfidtxt">
   </div>
