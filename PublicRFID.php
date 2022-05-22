@@ -25,24 +25,32 @@ if (isset($_POST['RFID'])){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>Private RFID Scan</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Public RFID Scan</title>
   <style type="text/css">
     *{
       margin: 0;
       padding: 0;
-      background-color:white;
-
-    }
-
-  body {
+      background-color: white;
+  </style>
+  <title></title>
+</head>
+<style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: white;
+  </style>
+  <title></title>
+</head>
+<style>body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     background: url() no-repeat;
     background-size: cover;
     background-color: white;
@@ -50,7 +58,6 @@ if (isset($_POST['RFID'])){
 body {
   overflow: hidden; /* Hide scrollbars */
 }
-
 .textbox {
     overflow: hidden;
     font-size: 20px;
@@ -68,19 +75,59 @@ body {
     margin: 0 10px;
     color: white;
 }
-  </style>
-</head>
-
-<body>
-  <center> <h1 style= "color:black;"> Please tap ID on Scanner </h1> </center>
-  <div class="row"></div>
-  <div class="row"></div>
-  <center><img src="images/RFID1.png"
-      width="450"
-      height="450"></center>
-  <form name="form" action="" method="post">
-  <div class="textbox"><input style=back type="text" autofocus="autofocus" name="RFID" id="RFID">
-  </div>
   
+.button {
+  margin-top:20px;
+  height: 15%;
+  width: 15%;
+  margin-left: 2%;
+  border-radius: 20px;
+  border: 1px solid #74ABFF;
+  background-color: #74ABFF;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  background-color: #5C9DFF;
+  outline: none;
+}
+
+.textbox {
+  height: 2%;
+}
+
+.rfidtxt {
+  display: none;
+}
+
+.title1{
+
+  margin: 5px;
+  padding: 5px;
+ display: inline-block;
+
+}
+</style>
+<body>
+  
+  <div class="container-1">
+    <a href="carousel.php"><input type="button" placeholder="Back" class="button" value=" < Back"></a> <center> <h2 class="title1" style= "color:black;">Please tap ID on scanner</h2> </center>
+   <center>
+    <div class="row"></div>
+    <img src="images/RFID1.png" width="35%" height="35%"></center>
+  <form name="form" action="" method="post">
+  <div class="textbox"><input style=back type="text" autofocus="autofocus" name="RFID" id="RFID" class="rfidtxt">
+  </div>
+  </div>
 </body>
 </html>
