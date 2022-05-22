@@ -16,19 +16,7 @@
 
 
     }
-
-    p {
-      margin-top: 10px;
-      margin-left: 1%;
-      font-weight: bold;
-      font-size: 2em;
-    }
-    
-    table {
-      margin: 5px;
-      width: 50%;
-    }
-
+ 
 	</style>
 	<title>Admin Navigation Bar</title>
 </head>
@@ -51,42 +39,6 @@
       </ul>
     </div>
   </nav>
-    <p> Current Inventory:</p>
-  <?php $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-$sql = "SELECT ID, name, Qty FROM inventory";
-$result = $conn->query($sql);
-
-echo "<font color=Black> <table border='1'>
-
-<tr>
-
-<th>ID</th>
-
-<th>Name</th>
-
-<th>Qty</th>
-
-</tr>";
-
-while($row = $result->fetch_assoc())
-  {
-
-  echo "<tr>";
-
-  echo "<td>" . $row['ID'] . "</td>";
-
-  echo "<td>" . $row['name'] . "</td>";
-
-  echo "<td>" . $row['Qty'] . "</td>";
-
-  echo "</tr>";
-
-  }
-
-echo "</table>";
-
-?>
-
 
 </body>
 </html>
