@@ -20,6 +20,7 @@ $result = $conn->query($sql);
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -35,8 +36,8 @@ $result = $conn->query($sql);
       margin: 0;
       padding: 0;
       background-color: white;
-  </style>
-  <style>
+    }
+
     .button {
     width: 100%;
     padding: 8px;
@@ -48,8 +49,25 @@ $result = $conn->query($sql);
     cursor: pointer;
     margin: 12px 0;
 }
-  </style>
-  <style type="text/css">
+
+.button:disabled {
+
+  cursor: not-allowed;
+}
+
+p {
+  color: black;
+  font-weight: bold;
+}
+
+.btn-container {
+  display: inline-block;
+}
+.container {
+
+  margin: 0px;
+  padding:0px;
+}
         #snackbar {
           visibility: hidden; /* Hidden by default. Visible on click */
           min-width: 250px; /* Set a default minimum width */
@@ -275,128 +293,12 @@ $result = $conn->query($sql);
           
         }
     ?>
-  <center> <h1 style= "font-family: sans; color:Black;">Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> </center>
-  <div class="row"></div>
-  <div class="row"></div>
-   <div class="row">
-    <div class="col s1"></div>
-    <div class="col s2 center">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/alcohol.png">
-        </div>
-        <div class="card-content white">
-          <p style="background-color:white;">Alcohol
-          </p>
-        </div>
-        <?php
-        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-        $sqlcheck = "SELECT name FROM testing WHERE name='Alcohol' ";
-        $check = $conn->query($sqlcheck);
-        $checkname = $check->fetch_assoc();
-        if (empty($checkname['name'])) {
-        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button1' value='Add to cart'></form>";
-      } else {
-        echo "<form method='post'><input class='button' style ='background-color:red;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
-           } 
-         ?>
-      </div>
-      </div>
-    <div class="col s2 center">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/alcohol.png">
-        </div>
-        <div class="card-content white">
-          <p style="background-color:white;">Gause Pad
-          </p>
-        </div>
-        <?php
-        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-        $sqlcheck = "SELECT name FROM testing WHERE name='Gauze Pad' ";
-        $check = $conn->query($sqlcheck);
-        $checkname = $check->fetch_assoc();
-        if (empty($checkname['name'])) {
-        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button2' value='Add to cart'></form>";
-      } else {
-        echo "<form method='post'><input class='button' style ='background-color:red;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
-           } 
-         ?>
-    </div>
-    </div>
 
-    <div class="col s2 center">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/alcohol.png">
-        </div>
-        <div class="card-content white">
-          <p style="background-color:white;">Tape
-          </p>
-        </div>
-        <?php
-        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-        $sqlcheck = "SELECT name FROM testing WHERE name='Tape' ";
-        $check = $conn->query($sqlcheck);
-        $checkname = $check->fetch_assoc();
-        if (empty($checkname['name'])) {
-        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button3' value='Add to cart'></form>";
-      } else {
-        echo "<form method='post'><input class='button' style ='background-color:red;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
-           } 
-         ?>
-    </div>
-    </div>
 
-    <div class="col s2 center">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/alcohol.png">
-        </div>
-        <div class="card-content white">
-          <p style="background-color:white;">Betadine
-          </p>
-        </div>
-        <?php
-        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-        $sqlcheck = "SELECT name FROM testing WHERE name='Betadine' ";
-        $check = $conn->query($sqlcheck);
-        $checkname = $check->fetch_assoc();
-        if (empty($checkname['name'])) {
-        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button4' value='Add to cart'></form>";
-      } else {
-        echo "<form method='post'><input class='button' style ='background-color:red;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
-           } 
-         ?>
-    </div>
-    </div>
-    <div class="col s2 center">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/alcohol.png">
-        </div>
-        <div class="card-content white">
-          <p style="background-color:white;">Cotton
-          </p>
-        </div>
-        <?php
-        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
-        $sqlcheck = "SELECT name FROM testing WHERE name='Cotton' ";
-        $check = $conn->query($sqlcheck);
-        $checkname = $check->fetch_assoc();
-        if (empty($checkname['name'])) {
-        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button5' value='Add to cart'></form>";
-      } else {
-        echo "<form method='post'><input class='button' style ='background-color:red;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
-           } 
-         ?>
-    </div>
-    </div>
-    </div>
-
+  
 <div class="container">
-    <button style="background-color: lightskyblue; color: black;" class="btn modal-trigger" data-target="terms">Cart
-    </button>
+    <button style="background-color: lightskyblue; color: black; display:inline-block;" class="btn modal-trigger" data-target="terms"> View Cart </button>
+    <form method='post'><input class='button' style="width: 10%; display: inline-block;" type='submit' name='button7' value='Cancel'></form>
   <div style="background-color: white;" class="modal" id="terms">
     <div style="background-color: white; color: black;" class="modal-content">
       <h3>Cart</h3>
@@ -445,17 +347,19 @@ $result = $conn->query($sql);
 
           ?></p>
     </div>
-    <div style="background-color: white;" class="modal-footer">
-      <form method="post">
-      <button class="btn teal  modal-close">Cancel</button>
-      <input style="background-color: lightskyblue;" width="50%" type="submit" name="button6" value="Checkout" class="btn"></input>
-      </form>  
+      <div style="background-color: white;" class="modal-footer">
+        <form method="post">
+        <button class="btn teal  modal-close">Cancel</button>
+       <input style="background-color: lightskyblue; display:inline-block;" width="50%" type="submit" name="button6" value="Checkout" class="btn"></input>
+        </form>  
+      </div>
+  </div>
+  </div>
 
-      
-    </div>
-  </div>
-  </div>
-  <div class="col s3"> <form method='post'><input class='button' style="width: 10%;" type='submit' name='button7' value='Cancel'></form></div>
+
+<!--- -->
+
+
   <div id="snackbar">Added to cart!</div>
 <script src="js/materialize.min.js"></script>
 <script>
@@ -475,7 +379,196 @@ $result = $conn->query($sql);
 
   // After 3 seconds, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
 }
 </script>
+
+<!--- -->
+
+  <center> <h1 style= "font-family: sans; color:Black;"> Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> </center>
+  <div class="row"></div>
+  <div class="row"></div>
+   <div class="row">
+    <div class="col s1"></div>
+    <div class="col s2 center">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/alcohol.png">
+        </div>
+        <div class="card-content white">
+          <p style="background-color:white;">Alcohol
+            <br> Available in stock: 
+             <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $query = "SELECT Qty from inventory WHERE name='Alcohol' ";
+        $check = $conn->query($query);
+        $checkname = $check->fetch_assoc();
+        if ($query == 0) {
+        echo "Out of Stock!";
+      }
+      else {
+        echo $checkname['Qty'];
+      }
+        ?>
+          </p>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $sqlcheck = "SELECT name FROM testing WHERE name='Alcohol' ";
+        $check = $conn->query($sqlcheck);
+        $checkname = $check->fetch_assoc();
+        if (empty($checkname['name'])) {
+        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button1' value='Add to cart'></form>";
+      } else {
+        echo "<form method='post'><input class='button' style ='background-color:#e8435f;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
+           } 
+         ?>
+      </div>
+      </div>
+    <div class="col s2 center">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/alcohol.png">
+        </div>
+        <div class="card-content white">
+          <p style="background-color:white;">Gauze Pad
+            <br> Available in stock: 
+             <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $query = "SELECT Qty from inventory WHERE name='Gauze Pad' ";
+        $check = $conn->query($query);
+        $checkname = $check->fetch_assoc();
+       if ($query == 0) {
+        echo "Out of Stock!";
+      }
+      else {
+        echo $checkname['Qty'];
+      }
+        ?>
+          </p>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $sqlcheck = "SELECT name FROM testing WHERE name='Gauze Pad' ";
+        $check = $conn->query($sqlcheck);
+        $checkname = $check->fetch_assoc();
+        $query = "SELECT Qty from inventory WHERE name='Gauze Pad' ";
+        $check = $conn->query($query);
+        if (empty($checkname['name'])) {
+        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button2' value='Add to cart'></form>";
+      } else {
+        echo "<form method='post'><input class='button' style ='background-color:#e8435f;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
+           } 
+         ?>
+    </div>
+    </div>
+
+    <div class="col s2 center">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/alcohol.png">
+        </div>
+        <div class="card-content white">
+          <p style="background-color:white;">Tape
+            <br> Available in stock: 
+             <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $query = "SELECT Qty from inventory WHERE name='Tape' ";
+        $check = $conn->query($query);
+        $checkname = $check->fetch_assoc();
+        if ($query == 0) {
+        echo "Out of Stock!";
+      }
+      else {
+        echo $checkname['Qty'];
+      }
+        ?>
+          </p>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $sqlcheck = "SELECT name FROM testing WHERE name='Tape' ";
+        $check = $conn->query($sqlcheck);
+        $checkname = $check->fetch_assoc();
+        if (empty($checkname['name'])) {
+        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button3' value='Add to cart'></form>";
+      } else {
+        echo "<form method='post'><input class='button' style ='background-color:#e8435f;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
+           } 
+         ?>
+    </div>
+    </div>
+
+    <div class="col s2 center">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/alcohol.png">
+        </div>
+        <div class="card-content white">
+          <p style="background-color:white;">Betadine
+            <br> Available in stock: 
+             <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $query = "SELECT Qty from inventory WHERE name='Betadine' ";
+        $check = $conn->query($query);
+        $checkname = $check->fetch_assoc();
+        
+      if ($query == 0) {
+        echo "Out of Stock!";
+      }
+      else {
+        echo $checkname['Qty'];
+      }
+
+        ?>
+          </p>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $sqlcheck = "SELECT name FROM testing WHERE name='Betadine' ";
+        $check = $conn->query($sqlcheck);
+        $checkname = $check->fetch_assoc();
+        if (empty($checkname['name'])) {
+        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button4' value='Add to cart'></form>";
+      } else {
+        echo "<form method='post'><input class='button' style ='background-color:#e8435f;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
+           } 
+         ?>
+    </div>
+    </div>
+    <div class="col s2 center">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/alcohol.png">
+        </div>
+        <div class="card-content white">
+          <p style="background-color:white;">Cotton
+            <br> Available in stock: 
+             <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $query = "SELECT Qty from inventory WHERE name='Cotton' ";
+        $check = $conn->query($query);
+        $checkname = $check->fetch_assoc();
+        echo $checkname['Qty']
+        ?>
+          </p>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
+        $sqlcheck = "SELECT name FROM testing WHERE name='Cotton' ";
+        $check = $conn->query($sqlcheck);
+        $checkname = $check->fetch_assoc();
+        if (empty($checkname['name'])) {
+        echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button5' value='Add to cart'></form>";
+      } else {
+        echo "<form method='post'><input class='button' style ='background-color:#e8435f;' disabled='disabled' type='submit' name='button1' value='Already in Cart' disabled></form>";
+           } 
+         ?>
+    </div>
+    </div>
+    </div>
+
+
 </body>
 </html>
