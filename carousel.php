@@ -17,11 +17,7 @@ $result7 = $conn->query($sql7);
 $sql8 = "TRUNCATE TABLE testing";
 $result8 = $conn->query($sql8);
 
-
-
  ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -30,10 +26,9 @@ $result8 = $conn->query($sql8);
 	<meta charset="utf-8">
 	<!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+    <link rel="stylesheet" href="css/style.css">
 	<title></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style type="text/css">
@@ -45,7 +40,7 @@ $result8 = $conn->query($sql8);
 
 		}
 		.carousel{
-			height: 600px;
+			height: 500px;
 		}
 		.carousel .carousel-item{
 			width: 500px;
@@ -66,10 +61,16 @@ $result8 = $conn->query($sql8);
 	font-weight: bold;
 	padding: 5px 50px 5px;
 	letter-spacing: 1px;
-	height: 50%;
+	height: 70%;
 	transition: transform 80ms ease-in;
+	position: relative;
 }
 
+h1 {
+	margin-top: 10px;
+	padding: 0;
+	font-weight: medium;
+}
 
 	</style>
 
@@ -108,18 +109,16 @@ $result8 = $conn->query($sql8);
 
 <body>
 
+<center>
 
- 
 <div class="carousel">
+	 <h1> Tap photo to continue </h1>
 	<a href="#one" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/1.png" alt=""></a>
 	<a href="#two" class="carousel-item" onclick='window.location.href="RFID.php"' ><img src="images/2.png" alt=""></a>
 	<a href="#three" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/3.jpg" alt=""></a>
 	<a href="#four" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/4.png" alt=""></a>
 	<a href="#five" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/5.png" alt=""></a>
-
-
 </div>
-
 <center>
    <div class="btn prev"> < PREVIOUS </div>
      <div class="btn next"> NEXT > </div>
