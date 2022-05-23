@@ -39,8 +39,19 @@ $result = $conn->query($sql);
 overflow: hidden;
     }
 
+.button {
 
-    .button {
+  border: 1px solid #74ABFF;
+  background-color: #74ABFF;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+    .button1 {
   border-radius: 20px;
   border: 1px solid #74ABFF;
   background-color: #74ABFF;
@@ -315,8 +326,8 @@ p {
     ?>
 
 
- <input class='button' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel' formmethod="post">
-    <button style="color: white; width: 10%;display:inline-block; height: 6%; float: right; " class="btn modal-trigger" data-target="terms"> View Cart </button>
+ <input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel' formmethod="post">
+    <button style="color: white; width: 10%; display:inline-block; height: 6%; float: right; " class="btn modal-trigger" data-target="terms"> View Cart </button>
    
   <div style="background-color: white;" class="modal" id="terms">
     <div style="background-color: white; color: black;" class="modal-content">
@@ -445,7 +456,7 @@ p {
             }
 
             else {
-                 echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button5' value='Add to cart'></form>";
+                 echo "<form method='post'><input class='button' onclick='myFunction()' type='submit' name='button1' value='Add to cart'></form>";
             }
      
       } else {
