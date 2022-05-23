@@ -326,7 +326,7 @@ p {
     ?>
 
 
-  <a href="carousel.php"><input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel'></a>
+ <a href="carousel.php"><input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel'></a>
     <button style="color: white; width: 10%; display:inline-block; height: 6%; float: right; " class="btn modal-trigger" data-target="terms"> View Cart </button>
    
   <div style="background-color: white;" class="modal" id="terms">
@@ -416,8 +416,8 @@ p {
 
 <!--- -->
 
-  <center> <h1 style= "font-family: sans; color:black;"> Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> </center>
-  <div class="row"></div>
+  <center> <h1 style= "color:black;"> Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> 
+ <h2 style= "color:black;"> You may select one product at a time </h2> </center>
   <div class="row"></div>
    <div class="row">
     <div class="col s1"></div>
