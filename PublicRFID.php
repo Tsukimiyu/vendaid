@@ -67,12 +67,7 @@ body {
     margin: 8px 0;
     border-bottom: 1px white;
 }
-
-  /* REMOVE THIS vvvvvv IF YOU WANT TO SEE TEXTBOX */
-.rfidtxt {
-  visibility: hidden;
-} 
-
+  
 .textbox input {
     border: none;
     outline: none;
