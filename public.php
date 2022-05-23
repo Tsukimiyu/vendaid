@@ -326,7 +326,7 @@ p {
     ?>
 
 
- <input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel' formmethod="post">
+ <a href="carousel.php"><input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel'></a>
     <button style="color: white; width: 10%; display:inline-block; height: 6%; float: right; " class="btn modal-trigger" data-target="terms"> View Cart </button>
    
   <div style="background-color: white;" class="modal" id="terms">
