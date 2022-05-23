@@ -72,11 +72,6 @@ body {
     margin: 8px 0;
     border-bottom: 1px white;
 }
- 
-.rfidtxt {
-  visibility: hidden;
-} 
-
 .textbox input {
     border: none;
     outline: none;
