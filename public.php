@@ -416,8 +416,8 @@ p {
 
 <!--- -->
 
-  <center> <h1 style= "font-family: sans; color:black;"> Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> </center>
-  <div class="row"></div>
+  <center> <h1 style= "color:black;"> Select Products, <?php echo $firstname['FIRST_NAME'] ?> </h1> 
+ <h2 style= "color:black;"> You may select one product at a time </h2> </center>
   <div class="row"></div>
    <div class="row">
     <div class="col s1"></div>
