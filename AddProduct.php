@@ -57,10 +57,15 @@ function updater($name,$Qty){
       margin: 5px;
       margin-left: 2%;
     }
- .headertitle{
+  .headertitle{
+  color: #74ABFF;
 margin-left: 2%;
 font-weight: bold;
     }
+    th {
+      color: #74ABFF;
+    }
+
    .headersub{
 margin-left: 2%;
     }
