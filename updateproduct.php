@@ -200,7 +200,7 @@ margin-left: 2%;
   </nav>
 
  <h4 class="headertitle">  Update Product </h4>
-  <p class="headersub">  Update Your Product List </p>
+  <p class="headersub">  Update Product Quantity </p>
 
  <div class="row">
     <form style="height:500px;width:500px;" class="col s12" action="" method="post">
