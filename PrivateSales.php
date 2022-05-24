@@ -21,13 +21,16 @@
       margin-left: 2%;
       width: 80%;
     }
-  .headertitle{
-  color: #74ABFF;
+ th {
+    text-align: center;
+    margin-left: 5px;
+    background: #74ABFF;
+    color: #ffffff;
+    }
+ .headertitle{
+  color: #5C9DFF;
 margin-left: 2%;
 font-weight: bold;
-    }
-    th {
-      color: #74ABFF;
     }
    .headersub{
 margin-left: 2%;
@@ -68,18 +71,18 @@ margin-left: 2%;
     </div>
   </nav>
 
-  <h4 class="headertitle">  Private Sales </h4>
-  <p class="headersub">  Report for Private Sales  <a href="generate_pdf.php"> <input type="submit" class="pdf-btn" value="Generate PDF" /> </a> </p>
+   <h4 class="headertitle">  Private Sales </h4>
+  <p class="headersub">  Report for Private Sales <a href="generate_pdf.php"> <input type="submit" class="pdf-btn" value="Generate PDF" /> </a> </p>
 
   <?php $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
 $sql = "SELECT FIRST_NAME, LAST_NAME, Alcohol, Gauze_pad, Tape, Betadine, Cotton, Date FROM privatesales ORDER BY ID DESC";
 $result = $conn->query($sql);
 
-echo "<font color=Black> <table border='1'>
+echo "<font color=Black> <table border='1' class='highlight centered striped'>
 
 <tr>
 
-<th>First Name</th>
+<th style='border-top-left-radius: 10px;'>First Name</th>
 
 <th>Last Name</th>
 
@@ -93,18 +96,18 @@ echo "<font color=Black> <table border='1'>
 
 <th>Cotton</th>
 
-<th>Date</th>
+<th style='border-top-right-radius: 10px;'>Date</th>
 
 </tr>";
 
 while($row = $result->fetch_assoc())
   {
 
-  echo "<tr>";
+  echo "<tr style='border-bottom:2px solid; border-bottom-color:#5C9DFF'>";
 
-  echo "<td>" . $row['FIRST_NAME'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['FIRST_NAME'] . "</td>";
 
-  echo "<td>" . $row['LAST_NAME'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['LAST_NAME'] . "</td>";
 
   echo "<td>" . $row['Alcohol'] . "</td>";
 
@@ -116,7 +119,7 @@ while($row = $result->fetch_assoc())
 
   echo "<td>" . $row['Cotton'] . "</td>";
 
-  echo "<td>" . $row['Date'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['Date'] . "</td>";
 
   echo "</tr>";
 
