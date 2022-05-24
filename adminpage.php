@@ -14,26 +14,33 @@
 			margin: 0;
 			padding: 0;
     }
-.element::-webkit-scrollbar { 
-  width: 0 !important 
-}
+.element::-webkit-scrollbar { width: 0 !important }
     .cont1{
       margin-left: 2%;
     }
 .table1 {
 width: 40%;
 }
-  .headertitle, .headersub{
+.headertitle{
+  font-size: 2em;
 font-weight: bold;
+ color: #5C9DFF;
 padding: 0px;
     }
     .headersub {
-      color: #74ABFF;
+      font-weight: bold;
       font-size: 1.5em;
+       color: #000000;
     }
     table {
       margin: 5px;
       width: 80%;
+    }
+ th {
+    text-align: center;
+    margin-left: 5px;
+    background: #74ABFF;
+    color: #ffffff;
     }
 
    th, td {
@@ -41,6 +48,7 @@ padding: 0px;
     }
 
 .title1{
+  
   color: black;
 }
 	</style>
@@ -76,11 +84,11 @@ padding: 0px;
 $sql = "SELECT FIRST_NAME, LAST_NAME, Alcohol, Gauze_pad, Tape, Betadine, Cotton, Date FROM privatesales ORDER BY Date DESC LIMIT 5";
 $result = $conn1->query($sql);
 
-echo "<font color=Black> <table border='1' class='table2'>
+echo "<font color=Black> <table border='1' class='highlight centered striped'>
 
 <tr>
 
-<th>First Name</th>
+<th style='border-top-left-radius: 10px;'>First Name</th>
 
 <th>Last Name</th>
 
@@ -94,14 +102,14 @@ echo "<font color=Black> <table border='1' class='table2'>
 
 <th>Cotton</th>
 
-<th>Date</th>
+<th style='border-top-right-radius: 10px;'>Date</th>
 
 </tr>";
 
 while($row = $result->fetch_assoc())
   {
 
-  echo "<tr>";
+  echo "<tr style='border-bottom:2px solid; border-bottom-color:#5C9DFF'>";
 
   echo "<td>" . $row['FIRST_NAME'] . "</td>";
 
@@ -133,11 +141,11 @@ echo "</table>";
 $sql = "SELECT FIRST_NAME, LAST_NAME, Alcohol, Gauze_pad, Tape, Betadine, Cotton, Date FROM publicsales ORDER BY Date DESC LIMIT 5";
 $result = $conn1->query($sql);
 
-echo "<font color=Black> <table border='1' class='table2'>
+echo "<font color=Black> <table border='1' class='highlight centered striped'>
 
 <tr>
 
-<th>First Name</th>
+<th style='border-top-left-radius: 10px;'>First Name</th>
 
 <th>Last Name</th>
 
@@ -151,14 +159,14 @@ echo "<font color=Black> <table border='1' class='table2'>
 
 <th>Cotton</th>
 
-<th>Date</th>
+<th style='border-top-right-radius: 10px;'>Date</th>
 
 </tr>";
 
 while($row = $result->fetch_assoc())
   {
 
-  echo "<tr>";
+  echo "<tr style='border-bottom:2px solid; border-bottom-color:#5C9DFF'>";
 
   echo "<td>" . $row['FIRST_NAME'] . "</td>";
 
