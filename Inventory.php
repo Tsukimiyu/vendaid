@@ -21,13 +21,28 @@
       margin-left: 2%;
       width: 80%;
     }
+.pdf-btn {
+  border-radius: 20px;
+  border: 1px solid #74ABFF;
+  background-color: #74ABFF;
+  color: #FFFFFF;
+  margin-left: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 7px 25px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+}
  .headertitle{
-  color: #74ABFF;
+  color: #5C9DFF;
 margin-left: 2%;
 font-weight: bold;
     }
     th {
-      color: #74ABFF;
+    text-align: center;
+    margin-left: 5px;
+    background: #74ABFF;
+    color: #ffffff;
     }
    .headersub{
 margin-left: 2%;
@@ -55,33 +70,33 @@ margin-left: 2%;
   </nav>
 
  <h4 class="headertitle">  Inventory </h4>
-  <p class="headersub"> Current Inventory Status</p>
+  <p class="headersub"> Current Inventory Status <a href="generate_pdf.php"> <input type="submit" class="pdf-btn" value="Generate PDF" /> </a> </p>
   <?php $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
 $sql = "SELECT ID, name, Qty FROM inventory";
 $result = $conn->query($sql);
 
-echo "<font color=Black> <table border='1'>
+echo "<font color=Black> <table border='1' class='highlight centered striped'>
 
 <tr>
 
-<th>ID</th>
+<th style='border-top-left-radius: 10px;'>ID</th>
 
 <th>Name</th>
 
-<th>Qty</th>
+<th style='border-top-right-radius: 10px;'>Qty</th>
 
 </tr>";
 
 while($row = $result->fetch_assoc())
   {
 
-  echo "<tr>";
+  echo "<tr style='border-bottom:2px solid; border-bottom-color:#5C9DFF'>";
 
   echo "<td>" . $row['ID'] . "</td>";
 
   echo "<td>" . $row['name'] . "</td>";
 
-  echo "<td>" . $row['Qty'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['Qty'] . "</td>";
 
 
   echo "</tr>";
