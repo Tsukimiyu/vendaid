@@ -57,7 +57,8 @@ function updater($id,$value){
       margin: 5px;
       margin-left: 2%;
     }
- .headertitle{
+  .headertitle{
+  color: #74ABFF;
 margin-left: 2%;
 font-weight: bold;
     }
