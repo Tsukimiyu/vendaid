@@ -16,15 +16,28 @@
 
 
     }
- 
+
+  .headertitle{
+margin-left: 2%;
+font-weight: bold;
+padding: 0px;
+    }
+   .headersub{
+margin-left: 2%;
+    }
+    table {
+      margin: 5px;
+      width: 40%;
+    }
+
 	</style>
-	<title>Admin Navigation Bar</title>
+	<title>Admin Dashboard </title>
 </head>
 <body>
 	  <nav>
     <div style="background-color: lightskyblue" class="nav-wrapper">
       <a href="carousel.php"> <img class="navbar-logo" src="Images/vendaidbgblack.png"> </a>
-      <a href="useroption.php" href="#" class="brand-logo">Admin</a>
+      <a href="#" class="brand-logo">Admin Dashboard</a>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
@@ -39,6 +52,7 @@
       </ul>
     </div>
   </nav>
-
+    <h4 class="headertitle"> Welcome back, admin! </h4> 
+    
 </body>
 </html>
