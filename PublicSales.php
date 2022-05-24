@@ -16,6 +16,18 @@
 			padding: 0;
 
     }
+table {
+      margin: 5px;
+      margin-left: 2%;
+      width: 80%;
+    }
+ .headertitle{
+margin-left: 2%;
+font-weight: bold;
+    }
+   .headersub{
+margin-left: 2%;
+    }
 	</style>
 	<title>Public Sales Report</title>
 </head>
@@ -36,6 +48,9 @@
       </ul>
     </div>
   </nav>
+
+ <h4 class="headertitle">  Public Sales </h4>
+  <p class="headersub">  Report for Public Sales </p>
 
     <div class="table_public">
   <?php $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
@@ -96,6 +111,7 @@ while($row = $result->fetch_assoc())
 echo "</table>";
 
 ?>
+
 </div>
 </body>
 </html>
