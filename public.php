@@ -36,7 +36,7 @@ $result = $conn->query($sql);
       margin: 0;
       padding: 0;
       background-color: white;
-overflow: hidden;
+      overflow: hidden;
     }
 
 .button {
@@ -452,7 +452,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -497,7 +497,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -542,7 +542,7 @@ p {
          if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -589,7 +589,7 @@ p {
          if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -634,7 +634,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
