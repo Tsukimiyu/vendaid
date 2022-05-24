@@ -112,7 +112,7 @@ h1 {
 <center>
 
 <div class="carousel">
-	 <h1> Tap photo to continue </h1>
+	 <h1> Press picture to continue </h1>
 	<a href="#one" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/1.png" alt=""></a>
 	<a href="#two" class="carousel-item" onclick='window.location.href="RFID.php"' ><img src="images/2.png" alt=""></a>
 	<a href="#three" class="carousel-item" onclick='window.location.href="RFID.php"'><img src="images/3.jpg" alt=""></a>
