@@ -15,6 +15,24 @@
       padding: 0;
 
  }
+
+ table {
+      margin: 5px;
+      margin-left: 2%;
+      width: 80%;
+    }
+ .headertitle{
+  color: #74ABFF;
+margin-left: 2%;
+font-weight: bold;
+    }
+    th {
+      color: #74ABFF;
+    }
+   .headersub{
+margin-left: 2%;
+    }
+
   </style>
   <title>Inventory</title>
 </head>
@@ -35,7 +53,10 @@
       </ul>
     </div>
   </nav>
-  <?php $conn = mysqli_connect('localhost', 'root', 'admin', 'database');
+
+ <h4 class="headertitle">  Inventory </h4>
+  <p class="headersub"> Current Inventory Status</p>
+  <?php $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
 $sql = "SELECT ID, name, Qty FROM inventory";
 $result = $conn->query($sql);
 
