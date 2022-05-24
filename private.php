@@ -36,7 +36,7 @@ $result = $conn->query($sql);
       margin: 0;
       padding: 0;
       background-color: white;
-overflow: hidden;
+      overflow: hidden;
     }
 
 .button {
@@ -298,9 +298,9 @@ p {
                   $sql12 = "UPDATE users SET Balance= Balance - '{$numl['Total']}' WHERE RFID='{$rfid}'";
                   $result12 = $conn->query($sql12);
 
-                  $sql6 = "INSERT INTO publicsales 
-                  (`FIRST_NAME`, `LAST_NAME`, `Alcohol`, `Gauze_Pad`, `Tape`, `Betadine`, `Cotton`, `Total`, `Date`)
-                   VALUES ('{$firstname['FIRST_NAME']}','{$lastname['LAST_NAME']}', '{$alcohol['Alcohol']}', '{$gauze['Gauze_Pad']}', '{$tape['Tape']}', '{$betadine['Betadine']}', '{$cotton['Cotton']}', '{$numl['Total']}', now() )";
+                  $sql6 = "INSERT INTO privatesales 
+                  (`FIRST_NAME`, `LAST_NAME`, `Alcohol`, `Gauze_Pad`, `Tape`, `Betadine`, `Cotton`, `Date`)
+                   VALUES ('{$firstname['FIRST_NAME']}','{$lastname['LAST_NAME']}', '{$alcohol['Alcohol']}', '{$gauze['Gauze_Pad']}', '{$tape['Tape']}', '{$betadine['Betadine']}', '{$cotton['Cotton']}', now() )";
                   $result6 = $conn->query($sql6);
 
                   $sql7 = "DELETE FROM orderslip WHERE id=1";
@@ -344,8 +344,6 @@ p {
 
         <th>Qty</th>
 
-        <th>Price</th>
-
         </tr>";
   
         while($row = $result->fetch_assoc())
@@ -357,19 +355,17 @@ p {
 
           echo "<td>" . $row['Qty'] . "</td>";
 
-          echo "<td>" . "₱" . $row['Price'] . "</td>";
-
           echo "<td><a href='pubremovetest.php?id=".$row['id']."'>Remove From Cart</a></td>";
 
           echo "</tr>";
-          $money = $money + $row['Price'];
+          $money = $money + $row['Qty'];
           }
 
           echo "<tr>";
 
           echo "<td>Total:</td>";
 
-          echo "<td>" . "₱" . $money . "</td>";
+          echo "<td>" . $money . "</td>";
 
           echo "</tr>";
 
@@ -452,7 +448,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -497,7 +493,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -542,7 +538,7 @@ p {
          if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -589,7 +585,7 @@ p {
          if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
@@ -634,7 +630,7 @@ p {
         if (empty($checkname['name'])) {
 
             if ($query == 0){
-              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button1' value='Out of Stock'></form>";
+              echo "<form method='post'><input class='button' style ='background-color:#e8435f; disabled='disabled' type='submit' name='button8' value='Out of Stock'></form>";
             }
 
             else {
