@@ -146,59 +146,48 @@ p {
     </style>
 </head>
 <body>
-  <?php
+   <?php
       
         if(isset($_POST['button1'])) {
             usleep(500000);
             $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
             $query = "UPDATE orderslip SET Alcohol= 1 WHERE id='1'";
-            $query2 = "UPDATE orderslip SET Total = total + 1 WHERE id='1'";
-            $query1 = "INSERT INTO testing (`name`, `Qty`, `Price` ) VALUES ('Alcohol',1,1);";
+            $query1 = "INSERT INTO testing (`name`, `Qty`) VALUES ('Alcohol',1);";
             mysqli_query($conn, $query1);
             mysqli_query($conn, $query); 
-            mysqli_query($conn, $query2);
         }
         if(isset($_POST['button2'])) {
             usleep(500000);
             $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
             $query = "UPDATE orderslip SET Gauze_Pad= 1 WHERE id='1'";
-            $query2 = "UPDATE orderslip SET Total = total + 2 WHERE id='1'";
-            $query1 = "INSERT INTO testing (`name`, `Qty`, `Price`) VALUES ('Gauze Pad',1,2);";
+            $query1 = "INSERT INTO testing (`name`, `Qty`) VALUES ('Gauze Pad',1);";
             mysqli_query($conn, $query1);
             mysqli_query($conn, $query); 
-            mysqli_query($conn, $query2);
         }
         if(isset($_POST['button3'])) {
             usleep(500000);
             $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
             $query = "UPDATE orderslip SET Tape = 1 WHERE id='1'";
-            $query2 = "UPDATE orderslip SET Total = total + 3 WHERE id='1'";
-            $query1 = "INSERT INTO testing (`name`, `Qty`, `Price`) VALUES ('Tape',1,3);";
+            $query1 = "INSERT INTO testing (`name`, `Qty`) VALUES ('Tape',1);";
             mysqli_query($conn, $query1);
             mysqli_query($conn, $query); 
-            mysqli_query($conn, $query2);
         }
         if(isset($_POST['button4'])) {
             usleep(500000);
             $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
             $query = "UPDATE orderslip SET Betadine= 1 WHERE id='1'";
-            $query2 = "UPDATE orderslip SET Total = total + 4 WHERE id='1'";
-            $query1 = "INSERT INTO testing (`name`, `Qty`, `Price`) VALUES ('Betadine',1,4);";
+            $query1 = "INSERT INTO testing (`name`, `Qty`) VALUES ('Betadine',1);";
             mysqli_query($conn, $query1);
             mysqli_query($conn, $query); 
-            mysqli_query($conn, $query2);
         }
         if(isset($_POST['button5'])) {
             usleep(500000);
             $conn = mysqli_connect('localhost', 'gypsy', 'admin', 'database');
             $query = "UPDATE orderslip SET Cotton = 1 WHERE id='1'";
-            $query2 = "UPDATE orderslip SET Total = total + 5 WHERE id='1'";
-            $query1 = "INSERT INTO testing (`name`, `Qty`, `Price`) VALUES ('Cotton',1,5);";
+            $query1 = "INSERT INTO testing (`name`, `Qty`) VALUES ('Cotton',1);";
             mysqli_query($conn, $query1);
             mysqli_query($conn, $query); 
-            mysqli_query($conn, $query2);
         }
-          
         if(isset($_POST['button7'])){
           $sql7 = "DELETE FROM orderslip WHERE id=1";
           $result7 = $conn->query($sql7);
@@ -210,7 +199,7 @@ p {
         }
           
         if(isset($_POST['button6'])){
-          if ($result = $conn->query("SELECT * FROM `testing` LIMIT 1"));
+          if ($result = $conn->query("SELECT * FROM `testing` LIMIT 1"))
           {
 
               if ($obj = $result->fetch_object())
@@ -292,12 +281,6 @@ p {
                   $result5 = $conn->query($sql5);
                   $cotton = $result5->fetch_assoc();
 
-                  $sq11 = "SELECT Total FROM orderslip WHERE id=1";
-                  $resut11 = $conn->query($sq11);
-                  $numl = $resut11->fetch_assoc();
-                  $sql12 = "UPDATE users SET Balance= Balance - '{$numl['Total']}' WHERE RFID='{$rfid}'";
-                  $result12 = $conn->query($sql12);
-
                   $sql6 = "INSERT INTO privatesales 
                   (`FIRST_NAME`, `LAST_NAME`, `Alcohol`, `Gauze_Pad`, `Tape`, `Betadine`, `Cotton`, `Date`)
                    VALUES ('{$firstname['FIRST_NAME']}','{$lastname['LAST_NAME']}', '{$alcohol['Alcohol']}', '{$gauze['Gauze_Pad']}', '{$tape['Tape']}', '{$betadine['Betadine']}', '{$cotton['Cotton']}', now() )";
@@ -310,20 +293,17 @@ p {
                   $result8 = $conn->query($sql8);
 
                   header("Location: thankyou.php");
-
-              }
-              else
+              }else
               {
-                echo '<script>alert("Cart is empty!")</script>';
-                  
+                echo '<script>alert("Cart is empty!")</script>';        
 
               }
+              
+
+
+        }    
               $result->close();
           }
-
-          
-        }
-    ?>
 
 
  <a href="carousel.php"><input class='button1' style="width: 10%; display: inline-block; height: 6%;" type='submit' name='button7' value='Cancel'></a>
