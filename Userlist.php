@@ -57,10 +57,13 @@ function updater($value,$lastname,$status,$rfid,$balance){
       margin: 5px;
       margin-left: 2%;
     }
- .headertitle{
-     color: #74ABFF;
+  .headertitle{
+  color: #74ABFF;
 margin-left: 2%;
 font-weight: bold;
+    }
+    th {
+      color: #74ABFF;
     }
    .headersub{
 margin-left: 2%;
