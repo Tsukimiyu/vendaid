@@ -41,15 +41,31 @@ function updater($value,$lastname,$status,$rfid,$balance){
 }
     .button {
     width: 100%;
-    padding: 8px;
-    color: black;
-    background: none lightskyblue;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 12px 0;
+   border-radius: 20px;
+  border: 1px solid #74ABFF;
+  background-color: #74ABFF;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
 }
+
+.row {
+      margin: 5px;
+      margin-left: 2%;
+    }
+ .headertitle{
+  color: #74ABFF;
+margin-left: 2%;
+font-weight: bold;
+    }
+   .headersub{
+margin-left: 2%;
+    }
+
   </style>
     <title>Add User</title>
 </head>
@@ -70,6 +86,10 @@ function updater($value,$lastname,$status,$rfid,$balance){
       </ul>
     </div>
   </nav>
+
+ <h4 class="headertitle">  Add User </h4>
+  <p class="headersub">  Add a New User to the Database </p>
+
  <div class="row">
     <form style="height:500px;width:500px;" class="col s12" action="" method="post">
       <div class="row">
@@ -87,18 +107,15 @@ function updater($value,$lastname,$status,$rfid,$balance){
           <input id="status" type="text" name="status" style="color: black;" class="validate">
           <label for="status">Status</label>
         </div>
-        <div class="row"></div>
+
         <div class="input-field col s6">
           <input id="rfid" type="text" name="rfid" style="color: black;" class="validate">
           <label for="rfid">RFID</label>
-          
         </div>
-         <div class="row"></div>
         <div class="input-field col s6">
           <input id="balance" type="text" name="balance"style="color: black;" class="validate">
           <label for="balance">Balance</label>
         <input class="button" type="submit" /><br/>
-
         </div>
         <div class="row"></div>
       </div>
