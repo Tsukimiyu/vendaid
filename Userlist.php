@@ -21,12 +21,16 @@ table {
       width: 80%;
     }
   .headertitle{
-  color: #74ABFF;
+ color: #5C9DFF;
 margin-left: 2%;
 font-weight: bold;
     }
-    th {
-      color: #74ABFF;
+
+ th {
+    text-align: center;
+    margin-left: 5px;
+    background: #74ABFF;
+    color: #ffffff;
     }
    .headersub{
 margin-left: 2%;
@@ -61,11 +65,11 @@ margin-left: 2%;
 $sql = "SELECT ID, FIRST_NAME, LAST_NAME, STATUS, RFID, Balance FROM users";
 $result = $conn->query($sql);
 
-echo "<font color=black> <table border='1'>
+echo "<font color=black> <table border='1' class='highlight centered striped'>
 
 <tr>
 
-<th>ID</th>
+<th style='border-top-left-radius: 10px;'>ID</th>
 
 <th>First name</th>
 
@@ -75,7 +79,7 @@ echo "<font color=black> <table border='1'>
 
 <th>RFID</th>
 
-<th>Balance</th>
+<th style='border-top-right-radius: 10px;'>Balance</th>
 
 </tr>";
 
@@ -86,15 +90,15 @@ while($row = $result->fetch_assoc())
 
   echo "<td>" . $row['ID'] . "</td>";
 
-  echo "<td>" . $row['FIRST_NAME'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['FIRST_NAME'] . "</td>";
 
-  echo "<td>" . $row['LAST_NAME'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['LAST_NAME'] . "</td>";
 
   echo "<td>" . $row['STATUS'] . "</td>";
 
-  echo "<td>" . $row['RFID'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['RFID'] . "</td>";
 
-  echo "<td>" . $row['Balance'] . "</td>";
+  echo "<td style='font-weight:bold;'>" . $row['Balance'] . "</td>";
 
 
   echo "</tr>";
